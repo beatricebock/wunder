@@ -91,7 +91,7 @@ a.button,
   background-image: url(/assets/hero-blob.svg);
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 100vw;
+  background-size: 50vw;
   background-clip: border-box;
 
   overflow: visible;
@@ -139,6 +139,10 @@ h5 {
   font-weight: 600;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 h1 {
   font-size: 2.7em;
 }
@@ -147,14 +151,24 @@ h1 {
   padding: 5rem 10rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   .content {
     width: 50%;
+    max-width: 30rem;
+    margin: 0 3rem;
+    p {
+      font-size: 0.9em;
+    }
   }
 }
 @include media-query($on-laptop) {
   .container {
     flex-direction: column;
+    padding: 5rem 10rem;
+    padding: 5rem 3rem;
+    .content {
+      width: 100%;
+    }
   }
 }
 .api.container {
