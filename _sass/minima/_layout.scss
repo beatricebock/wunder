@@ -261,7 +261,9 @@ h1 {
 .pricing.container {
   justify-content: center;
   background-image: url("/assets/Rectangle.svg");
-  background-size: 100vw;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
   padding: 10rem;
   .content {
     text-align: center;
@@ -286,6 +288,53 @@ h1 {
       .button {
         padding: 0.25em 3em;
       }
+    }
+  }
+}
+
+footer.container {
+  background-color: #e7ecff;
+  display: unset;
+  padding: 2rem 10rem;
+  * {
+    font-size: 0.93em;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    &:first-of-type {
+      border-bottom: 1px solid #cdd1d4;
+    }
+    date {
+      color: #939ea4;
+    }
+    .page-title {
+      font-size: 1.5em;
+    }
+    &.links {
+      .footer-left * {
+        color: #929ecc;
+        margin-right: 2em;
+      }
+      .footer-right {
+        * {
+          margin-left: 1em;
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-query($on-laptop) {
+  footer.container .row {
+    flex-direction: column;
+    * {
+      margin-bottom: 2rem;
     }
   }
 }
