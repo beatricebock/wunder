@@ -140,54 +140,6 @@ a.button,
   }
 }
 
-.phone.container {
-  .main {
-    margin-bottom: 5rem;
-  }
-  .features-container ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 4rem;
-    row-gap: 1rem;
-    color: $dark-blue;
-    list-style: none;
-    margin: 0;
-    margin-left: 1rem;
-    li {
-      padding-left: 2rem;
-      strong {
-        position: relative;
-        margin-bottom: 1rem;
-        display: block;
-        &::before {
-          content: url("/assets/list-icon.svg");
-          position: absolute;
-          height: 2rem;
-          width: 2rem;
-          left: -3rem;
-          top: -0.5rem;
-        }
-      }
-      p {
-        font-size: 0.7em;
-      }
-    }
-  }
-}
-
-@include media-query($on-laptop) {
-  .phone.container {
-    flex-direction: column-reverse;
-    .content {
-    }
-    .phone-image img {
-      max-height: 20rem;
-      margin-bottom: 2rem;
-    }
-  }
-}
-
 h1,
 h2,
 h3,
@@ -240,6 +192,68 @@ h1 {
   .api.container {
     .content {
       width: 80%;
+    }
+  }
+}
+
+.phone.container {
+  .main {
+    margin-bottom: 5rem;
+  }
+  .features-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    color: $dark-blue;
+    list-style: none;
+    margin: 0;
+    margin-left: 1rem;
+    li {
+      padding-left: 2rem;
+      strong {
+        position: relative;
+        margin-bottom: 1rem;
+        display: block;
+        &::before {
+          content: url("/assets/list-icon.svg");
+          position: absolute;
+          height: 2rem;
+          width: 2rem;
+          left: -3rem;
+          top: -0.5rem;
+        }
+      }
+      p {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+
+@include media-query($on-laptop) {
+  .phone.container {
+    flex-direction: column-reverse;
+    .content {
+    }
+    .phone-image img {
+      max-height: 20rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.cta.container {
+  .content p {
+    margin-bottom: 2rem;
+  }
+}
+
+@include media-query($on-laptop) {
+  .cta.container {
+    .image {
+      margin-bottom: 2rem;
     }
   }
 }
