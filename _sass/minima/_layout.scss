@@ -149,6 +149,9 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  .content {
+    width: 50%;
+  }
 }
 @include media-query($on-laptop) {
   .container {
@@ -159,9 +162,6 @@ h1 {
   .image {
     width: 50%;
     margin-right: 4rem;
-  }
-  .content {
-    width: 50%;
   }
 }
 
