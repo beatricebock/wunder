@@ -39,18 +39,19 @@
     }
   }
 
-  .page-title {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: $brand-color;
-    &:hover {
-      text-decoration: none;
-    }
-  }
   .nav-right {
     .button {
       font-size: 0.8em;
     }
+  }
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: $brand-color;
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -90,7 +91,7 @@ a.button,
   background-image: url(/assets/hero-blob.svg);
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 100vh;
+  background-size: 100vw;
   background-clip: border-box;
 
   overflow: visible;
@@ -117,7 +118,7 @@ a.button,
   }
 }
 @include media-query($on-laptop) {
-  .hero .container {
+  .hero.container {
     flex-direction: column-reverse;
     height: auto;
     background-size: 100vw;
