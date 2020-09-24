@@ -263,7 +263,6 @@ h1 {
   background-image: url("/assets/Rectangle.svg");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position-y: center;
   padding: 10rem;
   .content {
     text-align: center;
@@ -289,6 +288,13 @@ h1 {
         padding: 0.25em 3em;
       }
     }
+  }
+}
+
+@include media-query($on-laptop) {
+  .pricing.container {
+    background-size: cover;
+    padding: 5rem 2rem;
   }
 }
 
