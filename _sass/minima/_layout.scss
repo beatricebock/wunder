@@ -84,11 +84,9 @@ a.button,
   }
 }
 
-.hero-container {
+.hero.container {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 9rem;
+
   background-image: url(/assets/hero-blob.svg);
   background-repeat: no-repeat;
   background-position-x: right;
@@ -119,7 +117,7 @@ a.button,
   }
 }
 @include media-query($on-laptop) {
-  .hero-container {
+  .hero .container {
     flex-direction: column-reverse;
     height: auto;
     background-size: 100vw;
