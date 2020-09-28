@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "https://newsapi.org/v2/top-headlines?country=us&apiKey=d02f619cf302402ea12c43f90bbc2139",
       "headers": [
         {
           "key": "Access-Control-Allow-Credentials",
