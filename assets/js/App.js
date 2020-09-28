@@ -1,5 +1,5 @@
 var url =
-  "https://cors-anywhere.herokuapp.com/" +
+  //"https://cors-anywhere.herokuapp.com/" +
   "http://newsapi.org/v2/top-headlines?" +
   "country=us&" +
   "apiKey=d02f619cf302402ea12c43f90bbc2139";
