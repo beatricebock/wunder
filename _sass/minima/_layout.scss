@@ -1,29 +1,3 @@
-/**
- * Site header
- */
-.site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
-}
-
-.site-title {
-  @include relative-font-size(1.625);
-  font-weight: 400;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
-}
-
 body {
   background-image: url("/assets/hero-blob.svg");
   background-repeat: no-repeat;
@@ -42,7 +16,7 @@ body {
 
 @include media-query($on-laptop) {
   html {
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.95);
   }
 }
 
@@ -64,10 +38,12 @@ h1 {
 }
 
 .site-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0.8rem 0;
-  justify-content: space-around;
-  align-items: center;
+  max-width: 80rem;
+  width: 80%;
+  margin: auto;
 
   .nav-left {
     * {
@@ -79,7 +55,12 @@ h1 {
     }
   }
 
+  .page-title {
+    justify-self: center;
+  }
+
   .nav-right {
+    justify-self: right;
     .button {
       font-size: 0.8em;
     }
@@ -98,7 +79,9 @@ h1 {
 @include media-query($on-laptop) {
   .site-nav {
     flex-direction: column;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     * {
       margin-bottom: 1rem;
     }
