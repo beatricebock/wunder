@@ -24,11 +24,51 @@
   }
 }
 
+body {
+  background-image: url("/assets/hero-blob.svg");
+  background-repeat: no-repeat;
+  background-position-y: -1rem;
+  background-position-x: right;
+  background-size: 51rem;
+}
+
+@include media-query(1500px) {
+  background-size: 60rem;
+}
+
+@include media-query($on-laptop) {
+  background-size: 45rem;
+}
+
+@include media-query($on-laptop) {
+  html {
+    @include relative-font-size(0.8);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $dark-blue;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+
 .site-nav {
   display: flex;
   padding: 0.8rem 0;
   justify-content: space-around;
   align-items: center;
+
   .nav-left {
     * {
       margin-right: 3rem;
@@ -48,7 +88,7 @@
 
 .page-title {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: $brand-color;
   &:hover {
     text-decoration: none;
@@ -95,21 +135,8 @@ a.button,
   }
 }
 
-body {
-  position: relative;
-  overflow-x: hidden;
-  &::after {
-    position: absolute;
-    content: url("/assets/hero-blob.svg");
-    width: 80%;
-    top: -2rem;
-    right: -28%;
-    z-index: -100;
-  }
-}
-
 .hero.container {
-  height: 80vh;
+  height: 85vh;
   justify-content: center;
 
   .hero-content {
@@ -138,30 +165,12 @@ body {
   .hero.container {
     flex-direction: column-reverse;
     height: auto;
-    background-size: 100vw;
-    background-position-y: center;
     padding: 0 4rem;
+    height: auto;
     .hero-image img {
       max-height: 15rem;
     }
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: $dark-blue;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h1 {
-  font-size: 2.7em;
 }
 
 .container {
@@ -181,7 +190,6 @@ h1 {
 @include media-query($on-laptop) {
   .container {
     flex-direction: column;
-    padding: 5rem 10rem;
     padding: 5rem 3rem;
     .content {
       width: 100%;
@@ -189,6 +197,8 @@ h1 {
   }
 }
 .api.container {
+  max-width: 80rem;
+  margin: auto;
   #api-wrapper {
     width: 60%;
     max-width: 35rem;
@@ -198,12 +208,9 @@ h1 {
     box-shadow: 0px 14px 77px -20px rgba(146, 158, 204, 1);
     padding: 3rem;
     border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     h2 {
       margin-bottom: 1em;
+      text-align: center;
     }
     h3 {
       margin-bottom: 1em;
@@ -239,6 +246,8 @@ h1 {
 }
 
 .phone.container {
+  max-width: 80rem;
+  margin: auto;
   .main {
     margin-bottom: 5rem;
   }
@@ -277,7 +286,10 @@ h1 {
 @include media-query($on-laptop) {
   .phone.container {
     flex-direction: column-reverse;
-
+    .features-container ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
     .phone-image img {
       max-height: 20rem;
       margin-bottom: 2rem;
@@ -286,6 +298,8 @@ h1 {
 }
 
 .cta.container {
+  max-width: 80rem;
+  margin: auto;
   .content p {
     margin-bottom: 2rem;
   }
